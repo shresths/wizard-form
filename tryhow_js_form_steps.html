@@ -137,13 +137,13 @@ button:hover {
     <p><input id="Last" placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
   </div>
   <div class="tab">Contact Info:
-    <p><input id="Email" placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input type="email" id="Email" placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
     <p><input id= "Phone"placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
   </div>
   <div class="tab">Birthday:
-    <p><input id="dd" placeholder="dd" oninput="this.className = ''" name="dd"></p>
-    <p><input id="mm" placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input id="yy"placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+    <p><input type= "number" min="1" max= "31" id="dd" placeholder="dd" oninput="this.className = ''" name="dd"></p>
+    <p><input type= "number" min="1" max="12" id="mm" placeholder="mm" oninput="this.className = ''" name="nn"></p>
+    <p><input type="number" min="1900" max="2018" id="yy"placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
   </div>
   <div class="tab">Login Info:
     <p><input id="Username" placeholder="Username..." oninput="this.className = ''" name="uname"></p>
