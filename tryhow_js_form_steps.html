@@ -249,9 +249,9 @@ function fixStepIndicator(n) {
     var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     if (!filter.test(email)) {
       $(".invalid-email:empty").append("Invalid Email Address");
-      $("#submitBtn").attr("disabled", true);
+      $("#nextBtn").attr("disabled", true);
     } else {
-      $("#submitBtn").attr("disabled", false);
+      $("#nextBtn").attr("disabled", false);
       $(".invalid-email").empty();
     }
   });
