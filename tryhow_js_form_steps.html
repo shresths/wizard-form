@@ -129,7 +129,7 @@ button:hover {
 </head>
 <body>
 
-<form id="regForm">
+<form id="regForm" name="regForm">
   <h1>Register:</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">Name:
@@ -225,12 +225,14 @@ function validateForm() {
       valid = false;
     }
   }
+
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
   return valid; // return the valid status
 }
+
 
 function fixStepIndicator(n) {
   // This function removes the "active" class of all steps...
@@ -240,7 +242,19 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
-}
+} 
+
+ $("#Email").on("input", function(){
+    var email = $("#Email").val();
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!filter.test(email)) {
+      $(".invalid-email:empty").append("Invalid Email Address");
+      $("#submitBtn").attr("disabled", true);
+    } else {
+      $("#submitBtn").attr("disabled", false);
+      $(".invalid-email").empty();
+    }
+  });
  
 </script>
 
